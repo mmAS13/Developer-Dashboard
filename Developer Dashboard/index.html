@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Developer Dashboard</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="theme-toggle" id="themeToggle">
+        <i class="fas fa-moon" id="themeIcon"></i>
+    </div>
+
+    <div class="dashboard">
+        <div class="header">
+            <h1><i class="fas fa-rocket"></i> Developer Dashboard</h1>
+            <p>Stay productive with real-time insights and tools</p>
+        </div>
+
+        <div class="grid">
+            <!-- Clock Widget -->
+            <div class="widget">
+                <h3><i class="fas fa-clock"></i> Real-Time Clock</h3>
+                <div class="clock-container">
+                    <div id="clock">00:00:00</div>
+                    <div id="date">-- -- --</div>
+                </div>
+            </div>
+
+            <!-- Weather Widget -->
+            <div class="widget">
+                <h3><i class="fas fa-cloud-sun"></i> Weather</h3>
+                <div class="weather-container">
+                    <div id="weatherContent" class="loading">Detecting location...</div>
+                </div>
+            </div>
+
+            <!-- Todo List Widget -->
+            <div class="widget">
+                <h3><i class="fas fa-tasks"></i> Todo List</h3>
+                <div class="todo-container">
+                    <div class="todo-input">
+                        <input type="text" id="todoInput" placeholder="Add a new task..." maxlength="100">
+                        <button id="addTodo"><i class="fas fa-plus"></i> Add</button>
+                    </div>
+                    <div id="todoList"></div>
+                </div>
+            </div>
+
+            <!-- Quote Widget -->
+            <div class="widget">
+                <h3><i class="fas fa-quote-left"></i> Quote of the Day</h3>
+                <div class="quote-container">
+                    <div id="quoteContent" class="loading">Loading inspirational quote...</div>
+                </div>
+            </div>
+
+            <!-- GitHub Widget -->
+            <div class="widget">
+                <h3><i class="fab fa-github"></i> GitHub Stats</h3>
+                <div id="githubContent" class="loading">
+                    <div style="text-align: center;">
+                        <input type="text" id="githubUsername" placeholder="Enter GitHub username" 
+                               style="margin-top: 1rem; padding: 0.75rem; border-radius: 8px; border: 2px solid var(--primary-color); width: 80%; background: rgba(255,255,255,0.1); color: var(--text-primary);">
+                        <button id="fetchGithub" style="margin-top: 1rem; padding: 0.75rem 1.5rem; background: var(--primary-color); color: white; border: none; border-radius: 12px; cursor: pointer; font-weight: 600;">
+                            <i class="fab fa-github"></i> Fetch Stats
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+  <!-- Custom JS -->
+     <script src="script.js"></script>
+    </body>
+</html>
